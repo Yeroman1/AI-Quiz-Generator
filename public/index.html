@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MCQ Quiz Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+  <h1> MCQ Quiz Generator</h1>
+
+  <div class="input-box">
+    <input id="topic" placeholder="Enter topic (e.g. JavaScript)" />
+    <input id="count" type="number" min="1" value="1" placeholder="No. of questions" />
+  </div>
+
+  <div class="input-box stacked">
+    <textarea id="description" placeholder="Add description or focus areas for the quiz..."></textarea>
+  </div>
+
+  <div class="input-box advanced">
+    <div class="difficulty-wrap">
+      <label for="difficulty">Difficulty</label>
+      <input type="hidden" id="difficulty" value="medium" />
+      <div id="difficultyDropdown" class="level-dropdown">
+        <button type="button" id="difficultyBtn" class="dropdown-btn">Medium</button>
+        <div class="dropdown-menu">
+          <button type="button" class="dropdown-item" data-value="easy">Easy</button>
+          <button type="button" class="dropdown-item" data-value="medium">Medium</button>
+          <button type="button" class="dropdown-item" data-value="hard">Hard</button>
+        </div>
+      </div>
+    </div>
+    <button onclick="generateQuiz()">Generate</button>
+  </div>
+
+  <div id="quiz"></div>
+</div>
+
+<footer class="site-footer">
+  <p>Copyright &copy; 2026 Yeroman Diriba | Email: <a href="mailto:yeritti2017@gmail.com">yeritti2017@gmail.com</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
